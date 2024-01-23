@@ -2,7 +2,7 @@ on:
   pull_request:
     types: [opened, reopened]
   push:
-    branches: desarrollo
+    branches: main
  
 jobs:
   sonarqube:
@@ -12,4 +12,4 @@ jobs:
     steps:
       - name: "Environment"
         id: echoenv
-        run: echo "yeison ${{ env.YEISON }} "
+        run: echo "yeison '${{ env.YEISON }}' "
