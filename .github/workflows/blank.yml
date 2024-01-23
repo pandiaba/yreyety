@@ -14,11 +14,10 @@ jobs:
     steps:
       - name: "YEISON"
         id: echoenv
-        run: echo "yeison $env.YEISON  env_var $env_var"
+        run: echo "env_var $env_var"
         env:
           env_var: ${{vars.YEISON }}
       - name: "NOYEISON"
         id: echoenvno
-        run: echo "noyeison $env.NOYEISON  env_novar $env_novar"
-        env:
-          env_var: ${{vars.NOYEISON }}
+        run: echo "env_novar $env_novar"
+
