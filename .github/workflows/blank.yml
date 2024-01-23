@@ -15,8 +15,6 @@ jobs:
       - name: "YEISON"
         id: echoenv
         run: echo "env_var $env_var"
-        env:
-          env_var: ${{vars.YEISON }}
       - name: "NOYEISON"
         id: echoenvno
         run: echo "env_novar $env_novar"
