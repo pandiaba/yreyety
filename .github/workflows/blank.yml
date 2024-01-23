@@ -3,13 +3,17 @@ on:
     types: [opened, reopened]
   push:
     branches: main
- 
+env: 
+  env_var: ${{vars.NOYEISON } }
 jobs:
-  sonarqube:
+   aca:
     name: "Cual sera el valor de la variable"
     environment: Desa
     runs-on: ubuntu-latest
     steps:
       - name: "Environment"
         id: echoenv
-        run: echo "yeison '${{ env.YEISON }}' "
+        run: echo "yeison $env.YEISON"
+      - name: "Environment"
+        id: echoenvno
+        run: echo "noyeison $env.NOYEISON"
